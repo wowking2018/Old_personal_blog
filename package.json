@@ -1,0 +1,28 @@
+{
+    "name": "wowking2018-blog",
+    "title": "wowking2018 Blog",
+    "author": "wowking2018 <wowking.sky@gmail.com>",
+    "version": "1.8.0",
+    "homepage": "http://wowking2018.github.io",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wowking2018/wowking2018.github.io"
+    },
+    "bugs": "https://github.com/wowking2018/wowking2018.github.io/issues",
+    "devDependencies": {
+        "grunt": ">=1.3.0",
+        "grunt-banner": "~0.2.3",
+        "grunt-contrib-less": "^2.0.0",
+        "grunt-contrib-uglify": "^4.0.1",
+        "grunt-contrib-watch": "^1.1.0"
+    },
+    "scripts": {
+        "preview": "cd _site; python -m SimpleHTTPServer 8020",
+        "py3view": "cd _site; python3 -m http.server 8020",
+        "watch"  : "grunt watch & npm run preview & jekyll serve -w",
+        "py3wa"  : "grunt watch & npm run py3view & jekyll serve -w",
+        "boil"   : "git push boilerplate boilerplate:master",
+        "push"   : "git push origin master --tag",
+        "cafe"   : "git co gitcafe-pages; git merge master; git push gitcafe gitcafe-pages:gitcafe-pages --tag; git co master;"
+    }
+}
