@@ -181,7 +181,7 @@ $$
 \end{equation} 
 $$
 
-其中，$t_{m n, m^{\prime} n^{\prime}}=\left\langle m, n \lvert \frac{e^{2}}{4 \pi \varepsilon \lvert \hat{\vec{r}}_{m, n}-\hat{\vec{r}}_{m^{\prime}, n^{\prime}} \rvert }\rvert m^{\prime}, n^{\prime}\right\rangle$, Eq. $\eqref{eq_12}$中$\sum{}^{\prime}$ 表示 $m \neq m^{\prime}; n \neq n^{\prime}$. 考虑到不同格点之间的波函数交叠很小，一般只考虑最近邻格点之间的交叠，认为处理最近邻的相互作用，由此哈密顿量可写成：
+其中，$t _{m n, m^{\prime} n^{\prime}} = \left\langle m, n \lvert \frac{e^{2}}{4 \pi \varepsilon \lvert \hat{\vec{r}} _{m, n}-\hat{\vec{r}} _{m^{\prime}, n^{\prime}} \rvert } \rvert m^{\prime}, n^{\prime}\right\rangle$, Eq. $\eqref{eq_12}$ 中 $\sum{}^{\prime}$ 表示 $m \neq m^{\prime}; n \neq n^{\prime}$. 考虑到不同格点之间的波函数交叠很小，一般只考虑最近邻格点之间的交叠，认为处理最近邻的相互作用，由此哈密顿量可写成：
 
 $$
 \begin{equation}
@@ -248,12 +248,12 @@ $$
 \end{equation}
 $$
 
-其中，有效质量为 $m^{*}=\hbar^{2} /\left(2\lvert t \rvert a^{2}\right)$，回旋频率可以写为 $\omega_{c}=\frac{e B}{m^{*}}=\frac{4 \pi \alpha\lvert t \rvert}{\hbar}$，因此，靠近谱带底部的朗道能级可以写成
+其中，有效质量为 $m^{\ast}=\hbar^{2} /\left(2 \lvert t \rvert a^{2}\right)$，回旋频率可以写为 $\omega_{c}=\frac{e B}{m^{\ast}}=\frac{4 \pi \alpha \lvert t \rvert}{\hbar}$，因此，靠近谱带底部的朗道能级可以写成
 
 $$
 \begin{equation}
-	\frac{E}{|t|}=-4+4 \pi \alpha\left(n+\frac{1}{2}\right)
-\end{equation}\label{eq_19}
+	\frac{E}{|t|}=-4+4 \pi \alpha\left(n+\frac{1}{2}\right) \label{eq_19}
+\end{equation} 
 $$
 
 <img src="https://wowking2018.github.io/img/blog17/fig3_3.png" style="zoom: 100%;" width="500px"/>
@@ -277,11 +277,9 @@ $$
 
 > (a)在无量纲磁场 $b$ 的 $100$ 个取值范围为 $0-1$ 时，恢复了Hofstadter蝴蝶；(b)对于每个 $b$ 值，识别出 $9$ 个峰，并将它们的位置绘制为一系列彩点，点的颜色是测量特征值与数值计算特征值之差的绝对值. 
 
-2020年，有研究小组报告了在六方氮化硼基底上制造的石墨烯器件中存在霍夫施塔特蝴蝶光谱的证据[^10]. 在石墨烯晶格与氮化硼接近零角度，由外加磁场和大规模 moiré结构之间的相互作用产生了蝴蝶型光谱. 
+2020年，有研究小组报告了在六方氮化硼基底上制造的石墨烯器件中存在霍夫施塔特蝴蝶光谱的证据[^10]. 在石墨烯晶格与氮化硼接近零角度，由外加磁场和大规模 moiré 结构之间的相互作用产生了蝴蝶型光谱. 
 
 <img src="https://wowking2018.github.io/img/blog17/fig4_3.png" style="zoom: 100%" width="500px"/>
-
-> Hofstadter 蝴蝶相图. 横轴表示电子密度，纵轴表示磁通量的强度，从底部的零开始，这种模式周期性地重复高磁场. 这些颜色代表光谱中缺口的陈数，蓝色的冷色表示负陈数，暖红色表示正陈数，白色表示零. 
 
 ### 5. 结语
 从霜花到海岸线，自然界中分形无处不在，近现代物理学中同样不断能够找到分形的影子. 这一种有趣的量子分形现象——Hofstadter蝴蝶，从它与整数量子霍尔效应的联系出发，最近火热的转角石墨烯体系、分数陈绝缘体等与其相关密切. 从现在的眼光来看，Hofstadter's Butterfly本身就是朗道能级的二维格点版本. 本文也讨论了对于二维晶格的体系，加上对应的磁通，提取系统本征能量后便可以得到一个美丽的分形图案. 但若要在实验上得以实现，需要极大的磁通，最后也举例了最新的实验观测情况. 实际上，Hofstadter蝴蝶中与之相关的物理现象有很多，例如分数量子霍尔效应也与之有重要的联系. 
