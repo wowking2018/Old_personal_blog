@@ -213,7 +213,47 @@ $$
 > [Schematic of the experiments by Aidelsburger et al.](https://phys.org/news/2013-10-teams-cold-atoms-lasers-hofstadter.html)
 
 ``` matlab
-code is coming
+clear all;
+close all;
+
+% Set up simulation parameters
+hop_energy = 1;
+num_sites = 10;
+num_phases = 200;
+site_indices = 1:num_sites;
+phase_values = linspace(0, 2, num_phases);
+
+% Initialize energy array
+energy_spectrum = zeros(num_phases, num_sites^2);
+
+% Compute energy spectrum
+for phase_index = 1:num_phases
+    phase = phase_values(phase_index) * pi;
+    hop_matrix = diag(ones(1, num_sites - 1), 1) + diag(ones(1, num_sites - 1), -1);
+    phase_matrix = diag(exp(1j * phase * site_indices));
+    hamiltonian = kron(eye(num_sites), hop_matrix * hop_energy) + ...
+        kron(diag(ones(1, num_sites - 1), 1), phase_matrix) + ...
+        kron(diag(ones(1, num_sites - 1), -1), phase_matrix');
+    [~, eigvals] = eig(hamiltonian);
+    energy_spectrum(phase_index, :) = diag(eigvals);
+end
+
+% Plot energy spectrum
+figure();
+hold on;
+for band_index = 1:num_sites^2
+    band_energies = energy_spectrum(:, band_index);
+    band_energies(end) = NaN;
+    colors = band_energies;
+    patch(phase_values / 2, band_energies, colors, 'edgecolor', 'flat', 'facecolor', 'none', 'Linewidth', 1);
+end
+hold off;
+
+box on;
+colormap(hsv);
+axis square;
+xlim([0, 1]);
+ylim([-4, 4]);
 ```
 
 <img src="https://wowking2018.github.io/img/blog17/fig3_2.png" style="zoom: 100%;" width="500px"/>
@@ -267,9 +307,13 @@ $$
 
 1997年，Hofstadter蝴蝶在由一组散射体装备的微波波导的实验中得以再现[^8]. 正是由于散射体的微波波导的数学描述与磁场中的Bloch波之间的相似性，使得散射体周期序列的Hofstadter蝴蝶得以再现. 
 
-<img src="https://wowking2018.github.io/img/blog17/fig4_1a.png" style="zoom: 50%" width="50%" align = left><img src="https://wowking2018.github.io/img/blog17/fig4_1b.png" style="zoom: 50%" width="50%" align = right>
+<center>
+<figure>
+<img src="https://wowking2018.github.io/img/blog17/fig4_1a.png" style="zoom: 50%" width="50%"><img src="https://wowking2018.github.io/img/blog17/fig4_1b.png" style="zoom: 50%" width="50%">
+</figure>
+</center>
 
->微波波导中的分形情况：(a)散射体周期性排列的透射光谱，图中上部是通过反射得到的可以看到前两个Bloch带，显示了Hofstadter蝴蝶的两个部分. (其中黑色和白色分别对应高透射率和低透射率); (b)四个Bloch纹，隐约可以看见每一个中的Hofstadter能谱. 
+> (a)散射体周期性排列的透射光谱，图中上部是通过反射得到的可以看到前两个Bloch带，显示了Hofstadter蝴蝶的两个部分. (其中黑色和白色分别对应高透射率和低透射率); (b)四个Bloch纹，隐约可以看见每一个中的Hofstadter能谱. 
 
 2017年9月，Google的John Martinis小组与CQT的Angelakis 小组合作发表了使用9个超导量子比特的相互作用光子，去模拟磁场中电子的2维结果[^9]，复现出了Hofstadter蝴蝶. 
 
