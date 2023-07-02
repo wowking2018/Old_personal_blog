@@ -84,7 +84,7 @@ $$
 #### 3.1 朗道能级
 事实上，从现在的眼光来看，Hofstadter's Butterfly本身就是朗道能级的二维格点版本. 带电粒子能量在一系列分立的数值中取值，形成朗道能级. 求解外加磁场下的薛定谔方程，从而得到电子能级的分布，即为朗道能级. 外加磁场为均匀磁场，沿 $z$ 方向，即 $\textbf{B}=(0,0,B)$. 
 
-由 $\mathbf{B}=\nabla \times \hat{\mathbf{A}}$，取朗道规范可得磁矢势 $\hat{\mathbf{A}}=(-B y , 0, 0)$，式中 $\left| {B} \right|$，这样的规范下电子的正则动量为 $\hat{\textbf{p}}+q \hat{\textbf{A}}$，电子的哈密顿量可以写为：
+由 $\mathbf{B}=\nabla \times \hat{\mathbf{A}}$，取朗道规范可得磁矢势 $\hat{\mathbf{A}}=(-B y , 0, 0)$，式中 $\lvert {B} \rvert$，这样的规范下电子的正则动量为 $\hat{\textbf{p}}+q \hat{\textbf{A}}$，电子的哈密顿量可以写为：
 
 $$
 \begin{equation}
@@ -117,7 +117,7 @@ $$
 \end{equation}
 $$
 
-其中 $\tau$ 为电子的弛豫时间，$\frac{m \vec{v}}{\tau}$ 这一项表示电子运动过程中的碰撞效应，在一个二维系统中写为分量形式，当到达稳态时速度不随时间变化，已知电流密度 $J=n e v$，并令$\sigma=|e| n v, v=|e| \tau/ m$，写成矩阵形式为：
+其中 $\tau$ 为电子的弛豫时间，$\frac{m \vec{v}}{\tau}$ 这一项表示电子运动过程中的碰撞效应，在一个二维系统中写为分量形式，当到达稳态时速度不随时间变化，已知电流密度 $J=n e v$，并令$\sigma=\lvert e \rvert n v, v=\lvert e \rvert \tau/ m$，写成矩阵形式为：
 
 $$
 \begin{equation}
@@ -165,7 +165,7 @@ $$
 \end{equation}
 $$
 
-每个格点上都有一个初始波函数 $H_{m, n}^{0}|m, n\rangle=\mu|m, n\rangle$，且认为不同格点之间的波函数相互正交 $\left\langle m^{\prime}, n^{\prime} \mid m, n\right\rangle=\delta_{m^{\prime}, m} \delta_{n^{\prime}, n}$. 直接可以计算哈密顿量矩阵，然后对角化哈密顿量，便得到了体系的本征能量以及本征波矢. 矩阵元为[^5]：
+每个格点上都有一个初始波函数 $H_{m, n}^{0} \vert m, n\rangle=\mu \vert m, n\rangle$，且认为不同格点之间的波函数相互正交 $\left\langle m^{\prime}, n^{\prime} \mid m, n\right\rangle=\delta_{m^{\prime}, m} \delta_{n^{\prime}, n}$. 直接可以计算哈密顿量矩阵，然后对角化哈密顿量，便得到了体系的本征能量以及本征波矢. 矩阵元为[^5]：
 
 $$
 \begin{equation}
@@ -181,7 +181,7 @@ $$
 \end{equation} 
 $$
 
-其中，$t_{m n, m^{\prime} n^{\prime}}=\left\langle m, n\left|\frac{e^{2}}{4 \pi \varepsilon\left|\hat{\vec{r}}_{m, n}-\hat{\vec{r}}_{m^{\prime}, n^{\prime}}\right|}\right| m^{\prime}, n^{\prime}\right\rangle$, Eq. $\eqref{eq_12}$中$\sum{}^{\prime}$ 表示 $m \neq m^{\prime}; n \neq n^{\prime}$. 考虑到不同格点之间的波函数交叠很小，一般只考虑最近邻格点之间的交叠，认为处理最近邻的相互作用，由此哈密顿量可写成：
+其中，$t_{m n, m^{\prime} n^{\prime}}=\left\langle m, n \lvert \frac{e^{2}}{4 \pi \varepsilon \lvert \hat{\vec{r}}_{m, n}-\hat{\vec{r}}_{m^{\prime}, n^{\prime}} \rvert }\rvert m^{\prime}, n^{\prime}\right\rangle$, Eq. $\eqref{eq_12}$中$\sum{}^{\prime}$ 表示 $m \neq m^{\prime}; n \neq n^{\prime}$. 考虑到不同格点之间的波函数交叠很小，一般只考虑最近邻格点之间的交叠，认为处理最近邻的相互作用，由此哈密顿量可写成：
 
 $$
 \begin{equation}
@@ -240,7 +240,7 @@ $$
 \end{equation}
 $$
 
-由于能量范围是 $-4|t| < E < 4|t|$，带宽为 $8|t|$，在二维紧束缚带的底部附近由Eq. $\eqref{eq_17}$描述，能量近似为类自由电子，约化质量为[^7]：
+由于能量范围是 $-4 \lvert t \rvert < E < 4 \lvert t \rvert$，带宽为 $8\lvert t \rvert$，在二维紧束缚带的底部附近由Eq. $\eqref{eq_17}$描述，能量近似为类自由电子，约化质量为[^7]：
 
 $$
 \begin{equation}
@@ -248,7 +248,7 @@ $$
 \end{equation}
 $$
 
-其中，有效质量为 $m^{*}=\hbar^{2} /\left(2|t| a^{2}\right)$，回旋频率可以写为 $\omega_{c}=\frac{e B}{m^{*}}=\frac{4 \pi \alpha|t|}{\hbar}$，因此，靠近谱带底部的朗道能级可以写成
+其中，有效质量为 $m^{*}=\hbar^{2} /\left(2\lvert t \rvert a^{2}\right)$，回旋频率可以写为 $\omega_{c}=\frac{e B}{m^{*}}=\frac{4 \pi \alpha\lvert t \rvert}{\hbar}$，因此，靠近谱带底部的朗道能级可以写成
 
 $$
 \begin{equation}
@@ -267,11 +267,9 @@ $$
 
 1997年，Hofstadter蝴蝶在由一组散射体装备的微波波导的实验中得以再现[^8]. 正是由于散射体的微波波导的数学描述与磁场中的Bloch波之间的相似性，使得散射体周期序列的Hofstadter蝴蝶得以再现. 
 
-<center class = "half">
 <img src="https://wowking2018.github.io/img/blog17/fig4_1a.png" style="zoom: 50%" width="50%" align = left><img src="https://wowking2018.github.io/img/blog17/fig4_1b.png" style="zoom: 50%" width="50%" align = right>
-</center>
 
-> 微波波导中的分形情况：(a)散射体周期性排列的透射光谱，图中上部是通过反射得到的可以看到前两个Bloch带，显示了Hofstadter蝴蝶的两个部分. (其中黑色和白色分别对应高透射率和低透射率); (b)四个Bloch纹，隐约可以看见每一个中的Hofstadter能谱. 
+>微波波导中的分形情况：(a)散射体周期性排列的透射光谱，图中上部是通过反射得到的可以看到前两个Bloch带，显示了Hofstadter蝴蝶的两个部分. (其中黑色和白色分别对应高透射率和低透射率); (b)四个Bloch纹，隐约可以看见每一个中的Hofstadter能谱. 
 
 2017年9月，Google的John Martinis小组与CQT的Angelakis 小组合作发表了使用9个超导量子比特的相互作用光子，去模拟磁场中电子的2维结果[^9]，复现出了Hofstadter蝴蝶. 
 
