@@ -2,7 +2,7 @@
 layout:     post
 title:      KdV 方程求解及其背景
 subtitle:   孤子解
-date:       2023-07-09
+date:       2023-07-07
 author:     wowking
 catalog: true
 tags:
@@ -73,9 +73,18 @@ $$
 \end{equation}
 $$
 
-这便是著名的 Lax 方程, 其中 $\mathcal{L}, \mathcal{A}$ 称为 Lax 对. 这里给出一种由 Lax 对进行推导得出 KdV 方程的较为简单的方式， 取 $\mathcal{L}$ 为薛定谔算子 $\mathcal{L}=\partial^2 _{x}+u(x, t)$ ， $\mathcal{A}$ 为反对称算子 $\mathcal{A}=\alpha\left(\partial_x^3+a \partial_x+\partial_x a\right)$ ， 其中 $\alpha$ 是常数， $a$ 是变量 $a(x, t)$, 则
+这便是著名的 Lax 方程, 其中 $\mathcal{L}, \mathcal{A}$ 称为 Lax 对. 这里给出一种由 Lax 对进行推导得出 KdV 方程的较为简单的方式， 取 $\mathcal{L}$ 为 Hamilton 算子 $\mathcal{L}=-\partial^2 _{x}+u(x, t)$ (实际上Lax对确实和薛定谔方程是有联系的)， $\mathcal{A}$ 为反对称算子 $\mathcal{A}=\alpha\left(\partial_x^3+a \partial_x+\partial_x a\right)$ ， 其中 $\alpha$ 是常数， $a$ 是变量 $a \sim u$还没有给出具体的关系, 则
 
+$$
+\begin{aligned}
+\mathcal{A}\mathcal{L} & =\alpha\left(\partial_x^3+a \partial_x+\partial_x a\right)\left(-\partial^2 _x+u\right) \\
+& =\alpha\left\{\partial_x^5 +  a \partial_x^3+a_x \partial_x^2+ au_{x} +a_{x}u +u_{x x x} \right\} \\
+\mathcal{L}\mathcal{A} & =\alpha\left(-\partial^2 _{x}+u\right)\left(\partial_x^3+2a \partial_x+ a_x\right) \\
+& =\alpha\left\{\partial_x^5 + (u+a)\partial_x^3+2a_x \partial_x^2+ (a_{xx}+ua) \partial_{x}+ ua_{x} +a_{x x x}\right\}
+\end{aligned}
+$$
 
+由这两个算子便有
 
 取 $\alpha=-4$, 可以得到 $u_t+u_{x x}+6 u u_x=0$
 
