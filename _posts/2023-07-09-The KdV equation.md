@@ -15,8 +15,8 @@ tags:
 
 $$
 \begin{equation}
-    \frac{\partial \eta}{\partial \tau}=\sqrt{\frac{g}{h}} \frac{\partial}{\partial \xi}\left(\frac{3}{4} \eta^2+\alpha \eta+\frac{\sigma}{2} \frac{\partial^2 \eta}{\partial \xi^2}\right),
-\end{equation} \label{eq_1}
+    \frac{\partial \eta}{\partial \tau}=\sqrt{\frac{g}{h}} \frac{\partial}{\partial \xi}\left(\frac{3}{4} \eta^2+\alpha \eta+\frac{\sigma}{2} \frac{\partial^2 \eta}{\partial \xi^2}\right), \label{eq_1}
+\end{equation} 
 $$
 
 其中, $\sigma=\frac{1}{3} h^3-\frac{T h}{\rho g}, \eta$ 为波面高度, $h$ 为水深, $g$ 为重力加速度, $\rho$ 是水的密度, $\alpha$ 是与水的匀速流动有关的小常数, $T$ 是水的表面张力. 此后 Korteweg 和 de Vries 利用行波法求出与 Russel 描述一致的孤波解, 争论才告终止. 
@@ -33,8 +33,8 @@ $$
 
 $$
 \begin{equation}
-    u_t+u_{x x x}+6 u u_x=0
-\end{equation} \label{eq_3}
+    u_t+u_{x x x}+6 u u_x=0 \label{eq_3}
+\end{equation} 
 $$
 
 后人为了纪念这两位伟大的学者对孤波作出的贡献将 Eq. $\eqref{eq_1}$ 或 Eq. $\eqref{eq_3}$ 称为 *KdV* 方程. 
@@ -45,16 +45,16 @@ $$
 
 $$
 \begin{equation}
-    \mathcal{L} \phi=\lambda \phi .
-\end{equation}\label{eq_4}
+    \mathcal{L} \phi=\lambda \phi . \label{eq_4}
+\end{equation}
 $$
 
 其中 $\lambda$ 为谱参数, 如果只考虑等谱情况 ( $\lambda$ 与时间无关), 即 $\lambda_t=0$，其次 $\phi$ 还满足
 
 $$
 \begin{equation}
-    \phi_t=\mathcal{A} \phi,
-\end{equation} \label{eq_5}
+    \phi_t=\mathcal{A} \phi, \label{eq_5}
+\end{equation} 
 $$
 
 其中 $\mathcal{A}$ 也是线性算子. 将 Eq. $\eqref{eq_4}$ 对 $t$ 求导, 同时结合 Eq. $\eqref{eq_5}$ 有:
@@ -73,20 +73,48 @@ $$
 \end{equation}
 $$
 
-这便是著名的 Lax 方程, 其中 $\mathcal{L}, \mathcal{A}$ 称为 Lax 对. 这里给出一种由 Lax 对进行推导得出 KdV 方程的较为简单的方式， 取 $\mathcal{L}$ 为 Hamilton 算子 $\mathcal{L}=-\partial^2 _{x}+u(x, t)$ (实际上Lax对确实和薛定谔方程是有联系的)， $\mathcal{A}$ 为反对称算子 $\mathcal{A}=\alpha\left(\partial_x^3+a \partial_x+\partial_x a\right)$ ， 其中 $\alpha$ 是常数， $a$ 是变量 $a \sim u$还没有给出具体的关系, 则
+这便是著名的 Lax 方程, 其中 $\mathcal{L}, \mathcal{A}$ 称为 Lax 对. 这里给出一种由 Lax 对进行推导得出 KdV 方程的较为简单的方式， 取 $\mathcal{L}$ 为 Hamilton 算子 $\mathcal{L}=\partial^2 _{x} - u(x, t)$ (实际上Lax对确实和薛定谔方程是有联系的)， $\mathcal{A}$ 为反对称算子 $\mathcal{A}=\alpha \partial_x^3 + B(x,t) \partial_x+ C(x,t) $ ， 其中 $\alpha$ 是常数， $B(x, t), C(x, t)$ 是待定的项, 则
 
 $$
 \begin{aligned}
-\mathcal{A}\mathcal{L} & =\alpha\left(\partial_x^3+a \partial_x+\partial_x a\right)\left(-\partial^2 _x+u\right) \\
-& =\alpha\left\{\partial_x^5 +  a \partial_x^3+a_x \partial_x^2+ au_{x} +a_{x}u +u_{x x x} \right\} \\
-\mathcal{L}\mathcal{A} & =\alpha\left(-\partial^2 _{x}+u\right)\left(\partial_x^3+2a \partial_x+ a_x\right) \\
-& =\alpha\left\{\partial_x^5 + (u+a)\partial_x^3+2a_x \partial_x^2+ (a_{xx}+ua) \partial_{x}+ ua_{x} +a_{x x x}\right\}
+\mathcal{A}\mathcal{L} & =\left(\alpha \partial_x^3 + B(x,t) \partial_x+ C(x,t) \right)\left(\partial^2 _x - u\right) \\
+& = \alpha \partial_x^5 - \alpha(u_{xxx}+3u_{xx}\partial_{x} + 3u_{x}\partial_{x}^2 + u\partial_{x}^3) + B(\partial_{x}^3-u_{x}-u\partial_{x}) + C(\partial_{x}^2-u)\\
+\mathcal{L}\mathcal{A} & =\left(\partial^2 _x - u\right)\left(\alpha \partial_x^3 + B(x,t) \partial_x+ C(x,t) \right) \\
+& =  \alpha \partial_x^5 +(B_{xx}\partial_{x} + 2B_{x}\partial_{x}^2 + B \partial_{x}^3) + (C_{xx}+2C_{x}\partial_{x} + C\partial_{x}^2) - u\left(\alpha \partial_x^3 + B \partial_x+ C \right)
 \end{aligned}
 $$
 
 由这两个算子便有
 
-取 $\alpha=-4$, 可以得到 $u_t+u_{x x}+6 u u_x=0$
+$$
+\begin{equation}
+    u _{t} =\mathcal{A}\mathcal{L} -\mathcal{L}\mathcal{A} = -(3 \alpha u_{x}+2B_{x})\partial_{x}^2 -(3\alpha u_{xx} + B_{xx}+2C_{x})\partial_{x} +\alpha u_{xxx} - Bu_{x} -C_{xx}.
+\end{equation}
+$$
+
+其中等式右边有关 $\partial_{x}$ 的项都为 $0$，可得
+
+$$
+\begin{equation}
+    \begin{aligned}
+        &3 \alpha u_{x}+2B_{x} = 0 \\
+        &3\alpha u_{xx}+B_{xx}+2C_{x} = 0 
+    \end{aligned}
+\end{equation}
+$$
+
+进行积分后可以得到 
+
+$$
+\begin{equation}
+    \begin{aligned}
+        &B = -\frac{3}{2} \alpha u \\
+        &C = -\frac{3}{2} \alpha u_{x}+\frac{1}{2} B_{x} = -\frac{3}{4}\alpha u_{x}
+    \end{aligned}
+\end{equation}
+$$
+
+可以得到 $u_{t} = \alpha u_{xxx} - Bu_{x} -C_{xx}= \frac{1}{4}\alpha u_{xxx}+\frac{3}{2}\alpha u u_{x}$， 取 $\alpha=-4$, 即为 $u_t+u_{x x x}+6 u u_x=0$.
 
 ### 3. KdV方程求解
 #### 3.1 双曲正切法
@@ -132,11 +160,11 @@ $$
 
 $$
 \begin{equation}
-    -v S(Y)+3 S^2(Y)+c^2\left(1-Y^2\right) \left(-2 Y \frac{\mathrm{d} S(Y)}{\mathrm{d} Y}+\left(1-Y^2\right) \frac{\mathrm{d}^2 S(Y)}{\mathrm{d} Y^2}\right)=0
-\end{equation} \label{eq_8}
+    -v S(Y)+3 S^2(Y)+c^2\left(1-Y^2\right) \left(-2 Y \frac{\mathrm{d} S(Y)}{\mathrm{d} Y}+\left(1-Y^2\right) \frac{\mathrm{d}^2 S(Y)}{\mathrm{d} Y^2}\right)=0 \label{eq_12}
+\end{equation} 
 $$
 
-对于 $S=\sum_{m=0}^m a_m Y^m$, 参数 $M$ 是通过平衡第二项(非线性)的阶数来确定. 不妨设 $S(Y)=\gamma-\gamma Y^2$, 代入 Eq. $\eqref{eq_8}$进行化简可以得到
+对于 $S=\sum_{m=0}^m a_m Y^m$, 参数 $M$ 是通过平衡第二项(非线性)的阶数来确定. 不妨设 $S(Y)=\gamma-\gamma Y^2$, 代入 Eq. $\eqref{eq_12}$进行化简可以得到
 
 $$
 \begin{equation}
@@ -167,6 +195,8 @@ $$
     \end{aligned}
 \end{equation}
 $$
+
+P.S. 完稿于2023.07.08，其中用 Lax pair 推导的方式几经修改，修正了一些细节内容.
 
 ### 参考资料
 [^1]: Korteweg, Diederik Johannes, and Gustav De Vries. "On the change of form of long waves advancing in a rectangular canal, and on a new type of long stationary waves." The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science 39.240 (1895): 422-443.
