@@ -2,7 +2,7 @@
 layout:     post
 title:      KdV 方程求解及其背景
 subtitle:   孤子解
-date:       2023-07-07
+date:       2023-07-08
 author:     wowking
 catalog: true
 tags:
