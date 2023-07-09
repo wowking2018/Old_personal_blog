@@ -4,6 +4,7 @@ title:      量子分形
 subtitle:   分形世界-Hofstadter蝴蝶
 date:       2023-07-01
 author:     wowking
+header-img: img/blog17/bk.jpg
 catalog: true
 tags:
     - 物理

@@ -2,7 +2,7 @@
 layout:     post
 title:      What is entropy?
 subtitle:   A kind of simple mathematical derivation
-date:       2023-06-15
+date:       2023-06-19
 author:     wowking
 header-img: img/blog14/bk.jpg
 catalog: true

@@ -2,7 +2,7 @@
 layout:     post
 title:      KdV 方程求解及其背景
 subtitle:   孤子解
-date:       2023-07-08
+date:       2023-07-09
 author:     wowking
 catalog: true
 tags:
@@ -196,7 +196,7 @@ $$
 \end{equation}
 $$
 
-P.S. 完稿于2023.07.08，其中用 Lax pair 推导的方式几经修改，修正了一些细节内容.
+P.S. 其中用 Lax pair 推导的方式几经修改，修正了一些细节内容.
 
 ### 参考资料
 [^1]: Korteweg, Diederik Johannes, and Gustav De Vries. "On the change of form of long waves advancing in a rectangular canal, and on a new type of long stationary waves." The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science 39.240 (1895): 422-443.
