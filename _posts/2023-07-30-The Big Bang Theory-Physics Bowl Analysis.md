@@ -34,46 +34,46 @@ $$
 \end{equation}
 $$ 
 
-后续的过程中我会保持与题目中一致的记号进行推导. 首先，这并不是一个方程，台词中所说的 “Solve the equation” 显然是不对的，但为了保持统一我们暂时默认用积分式来代指这个式子. 同时对这个式子作相应的修改，
+后续的过程中我会保持与题目中一致的记号进行推导. 首先，这并不是一个方程，台词中所说的 “Solve the equation” 显然是不对的，但为了保持统一我们暂时默认用积分式来代指这个式子. 同时对这个式子作相应的修改，去掉了 $x$，同时如果是负缪子应该用 $u$ 来表示
 
 $$
 \begin{equation}
     \begin{aligned}
-        (2\pi)^4\int[\overline{\upsilon}^{(s_3)}(p_3)(i\sqrt{4\pi\alpha}\gamma^{\mu})\upsilon^{(s_1)}(p_1)]\frac{ig_{\mu\nu}}{q^{2}}[\overline{\upsilon}^{(s_4)}(p_4)(i\sqrt{4\pi\alpha}\gamma^{\nu}\upsilon^{(s_2)}(p_2)]  \\
+        (2\pi)^4\int[\overline{\upsilon}^{(s_3)}(p_3)(i\sqrt{4\pi\alpha}\gamma^{\mu})\upsilon^{(s_1)}(p_1)]\frac{ig_{\mu\nu}}{q^{2}}[\overline{u}^{(s_4)}(p_4)(i\sqrt{4\pi\alpha}\gamma^{\nu}u^{(s_2)}(p_2)]  \\
         \delta^{(4)}(p_1-p_3-q)\delta^{(4)}(p_2+q-p_4)\mathrm{d}^4q
     \end{aligned}
 \end{equation}
 $$ 
 
-如果分解来看，散射矩阵元是
+根据狄拉克函数的计算规则有 $q = p_1- p_3 = p_4- p_2$时，积分式可以转化为
 
 $$
 \begin{equation}
-    i{\cal M}=\frac{-i4\pi\alpha}{q^{2}}g_{\mu\nu}\left[\bar{\upsilon}^{(s_3)}\left(p_{3}\right)\gamma^{\mu}\upsilon^{(s_1)}\left(p_{1}\right)\right]\cdot[\bar{\upsilon}^{(s_4)}\left(p_{4}\right)\gamma^{\nu}\upsilon^{(s_2)}\left(p_{2}\right)].
+    i{\cal M}=\frac{-i4\pi\alpha}{q^{2}}g_{\mu\nu}\left[\bar{\upsilon}^{(s_3)}\left(p_{3}\right)\gamma^{\mu}\upsilon^{(s_1)}\left(p_{1}\right)\right]\cdot[\bar{u}^{(s_4)}\left(p_{4}\right)\gamma^{\nu}u^{(s_2)}\left(p_{2}\right)].
 \end{equation}
 $$
 
-根据动量守恒可以得到 $q^2 = (p_1 - p_3)^2 = 2p^2 (1-\cos \theta)$，$\theta$ 是散射粒子的夹角，对于中括号内的项可以表示为
+根据动量守恒可以得到 $(p_1 - p_3)^2 = 2p^2 (1-\cos \theta)$，$\theta$ 是散射粒子的夹角，对于中括号内的项可以表示为
 
 $$
 \begin{equation}
-    \tilde{v}(p^{\prime})\gamma^{\mu}v(p)=\left(m_v-E_v-\frac{p^2\cos\theta}{m_v+E_v},p\sin\theta,ip\sin\theta,p(1-\cos\theta)\right)
+    \bar{\upsilon}(p^{\prime})\gamma^{\mu}\upsilon(p)=\left(m_e-E_e-\frac{p^2\cos\theta}{m_e+E_e},p\sin\theta,ip\sin\theta,p(1-\cos\theta)\right)
 \end{equation}
 $$
 
-其中， $m_{\upsilon}$ 是电子质量，$E_{\upsilon}$ 是对应能量，$p, p^{\prime}$ 是输入和输出的动量. 如果假设粒子是 ultra-relativistic，即 $E_{e}\approx E_{\mu}\gg m_{\mu}$，上式可以表示为
+其中， $m_{e}$ 是电子质量，$E_{e}$ 是对应能量，$p, p^{\prime}$ 是散射进入和散射弹出的动量. 如果假设粒子是 ultra-relativistic，即 $E_{e}\approx E_{\mu}\gg m_{\mu}$，上式可以表示为(两项同理)
 
 $$
 \begin{equation}
-    \bar{v}(p^{\prime})\gamma^{\mu}v(p)\rightarrow p(1-\cos\theta,\sin\theta,i\sin\theta,1-\cos\theta)
+    \bar{\upsilon}(p^{\prime})\gamma^{\mu}\upsilon(p)\rightarrow p(1-\cos\theta,\sin\theta,i\sin\theta,1-\cos\theta)
 \end{equation}
 $$
 
-故可得到 Eq. (3）中的项为
+故可得到 Eq. (3) 中的项为
 
 $$
 \begin{equation}
-    g_{\mu\nu}\left[\bar{v}^{(s_{3})}\left(p_{3}\right)\gamma^{\mu}v^{(s_{1})}\left(p_{1}\right)\right]\cdot\left[\bar{v}^{(s_{4})}\left(p_{4}\right)\gamma^{\nu}v^{(s_{2})}\left(p_{2}\right)\right] \approx 2 p^2 (1-\cos \theta)^2
+    g_{\mu\nu}\left[\bar{v}^{(s_{3})}\left(p_{3}\right)\gamma^{\mu}v^{(s_{1})}\left(p_{1}\right)\right]\cdot\left[\bar{u}^{(s_{4})}\left(p_{4}\right)\gamma^{\nu}u^{(s_{2})}\left(p_{2}\right)\right] \approx 2 p^2 (1-\cos \theta)^2
 \end{equation}
 $$
 
@@ -97,11 +97,9 @@ $$
 
 $$
 \begin{equation}
-    \cal M = -8\pi \alpha.
+    \mathcal{M} = -8\pi \alpha.
 \end{equation}
 $$
-
-
 
 这个题目其实并不是很难，只要掌握了量子场论中的费曼规则，就可以根据图形把式子写出来. 但是在剧中，谢尔顿和他的队友们都没有回答出来，而是被一个门卫大叔轻松地说出了正确答案. 这不过是剧组的安排罢了，说多了都是剧情需要！
 
