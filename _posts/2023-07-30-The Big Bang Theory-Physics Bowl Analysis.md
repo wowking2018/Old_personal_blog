@@ -28,7 +28,7 @@ Physics Bowl 高中物理竞赛由美国物理教师协会 AAPT 主办，试题�
 $$
 \begin{equation}
     \begin{aligned}
-        (2\pi)^4\int[\overline{\upsilon}^{(s_3)}(p_3)(i\sqrt{4\pi\alpha}\gamma^{\mu})\upsilon^{(s_1)}(p_1)]\frac{ig_{\mu\nu}}{q^{2}}[\overline{\upsilon}^{(s_4)}(p_4)(i\sqrt{4\pi\alpha}\gamma^{\mu}\upsilon^{(s_2)}(p_2)] \\
+        (2\pi)^4\int[\overline{\upsilon}^{(s_3)}(p_3)(i\sqrt{4\pi\alpha}\gamma^{\mu})\upsilon^{(s_1)}(p_1)]\frac{ig_{\mu\nu}}{q^{2}}[\overline{\upsilon}^{(s_4)}(p_4)(i\sqrt{4\pi\alpha}\gamma^{\mu})\upsilon^{(s_2)}(p_2)] \\
         x\delta^{(4)}(p_1-p_3-q)\delta^{(4)}(p_2+q-p_4)\mathrm{d}^4q
     \end{aligned}
 \end{equation}
@@ -39,13 +39,19 @@ $$
 $$
 \begin{equation}
     \begin{aligned}
-        (2\pi)^4\int[\overline{\upsilon}^{(s_3)}(p_3)(i\sqrt{4\pi\alpha}\gamma^{\mu})\upsilon^{(s_1)}(p_1)]\frac{ig_{\mu\nu}}{q^{2}}[\overline{u}^{(s_4)}(p_4)(i\sqrt{4\pi\alpha}\gamma^{\nu}u^{(s_2)}(p_2)]  \\
+        (2\pi)^4\int[\overline{\upsilon}^{(s_3)}(p_3)(i\sqrt{4\pi\alpha}\gamma^{\mu})\upsilon^{(s_1)}(p_1)]\frac{ig_{\mu\nu}}{q^{2}}[\overline{u}^{(s_4)}(p_4)(i\sqrt{4\pi\alpha}\gamma^{\nu})u^{(s_2)}(p_2)]  \\
         \delta^{(4)}(p_1-p_3-q)\delta^{(4)}(p_2+q-p_4)\mathrm{d}^4q
     \end{aligned}
 \end{equation}
 $$ 
 
-根据狄拉克函数的计算规则有 $q = p_1- p_3 = p_4- p_2$时，积分式可以转化为
+根据狄拉克函数的计算规则有 $q = p_1- p_3 = p_4- p_2$时，对于 Eq. (2) 中其余项进行合并可以得到
+
+$$
+\int \delta^{(4)}(p_1-p_3-q)\delta^{(4)}(p_2+q-p_4)\mathrm{d}^4q = 1.
+$$
+
+积分式可以转化为
 
 $$
 \begin{equation}
@@ -74,14 +80,6 @@ $$
 $$
 \begin{equation}
     g_{\mu\nu}\left[\bar{v}^{(s_{3})}\left(p_{3}\right)\gamma^{\mu}v^{(s_{1})}\left(p_{1}\right)\right]\cdot\left[\bar{u}^{(s_{4})}\left(p_{4}\right)\gamma^{\nu}u^{(s_{2})}\left(p_{2}\right)\right] \approx 2 p^2 (1-\cos \theta)^2
-\end{equation}
-$$
-
-对于 Eq. (2) 中其余项进行合并可以得到
-
-$$
-\begin{equation}
-    (2\pi)^{4}\delta^{(4)}(p_{1}+p_{2}-p_{3}-p_{4})
 \end{equation}
 $$
 
